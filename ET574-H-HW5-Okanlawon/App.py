@@ -18,6 +18,8 @@ class StudentVisualizer(wx.Frame):
             label="Open Student Dataset"
         )
 
+        button.Bind(wx.EVT_BUTTON, self.load_data)
+
         sizer = wx.BoxSizer(wx.VERTICAL)
 
         sizer.AddStretchSpacer()
@@ -27,6 +29,9 @@ class StudentVisualizer(wx.Frame):
         panel.SetSizer(sizer)
 
         self.Show()
+
+    def load_data(self, event):
+        pass
 
 app = wx.App()
 frame = StudentVisualizer()
