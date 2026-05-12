@@ -31,7 +31,11 @@ class StudentVisualizer(wx.Frame):
         self.Show()
 
     def load_data(self, event):
-        pass
+
+        df = pd.read_csv(
+            "student_data.csv",
+            sep=";"
+        )
 
 app = wx.App()
 frame = StudentVisualizer()
