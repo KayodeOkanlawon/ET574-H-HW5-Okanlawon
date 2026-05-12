@@ -17,6 +17,14 @@ class StudentVisualizer(wx.Frame):
             label="Open Student Dataset"
         )
 
+        sizer = wx.BoxSizer(wx.VERTICAL)
+
+        sizer.AddStretchSpacer()
+        sizer.Add(button, 0, wx.ALIGN_CENTER | wx.ALL, 10)
+        sizer.AddStretchSpacer()
+
+        panel.SetSizer(sizer)
+
         self.Show()
 
 app = wx.App()
