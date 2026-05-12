@@ -1,5 +1,6 @@
 import wx
 import pandas as pd
+import matplotlib.pyplot as plt
 
 class StudentVisualizer(wx.Frame):
 
@@ -36,6 +37,22 @@ class StudentVisualizer(wx.Frame):
             "student_data.csv",
             sep=";"
         )
+
+        plt.figure(figsize=(8,5))
+
+        plt.scatter(
+            df["studytime"],
+            df["G3"]
+        )
+
+        plt.title("Study Time vs Final Grade")
+
+        plt.xlabel("Study Time")
+        plt.ylabel("Final Grade")
+
+        plt.grid(True)
+
+        plt.show()
 
 app = wx.App()
 frame = StudentVisualizer()
