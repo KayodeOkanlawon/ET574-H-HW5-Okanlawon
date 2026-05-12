@@ -12,6 +12,11 @@ class StudentVisualizer(wx.Frame):
 
         panel = wx.Panel(self)
 
+        button = wx.Button(
+            panel,
+            label="Open Student Dataset"
+        )
+
         self.Show()
 
 app = wx.App()
