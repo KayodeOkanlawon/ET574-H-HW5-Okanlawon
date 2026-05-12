@@ -1,4 +1,5 @@
 import wx
+import pandas as pd
 
 class StudentVisualizer(wx.Frame):
 
